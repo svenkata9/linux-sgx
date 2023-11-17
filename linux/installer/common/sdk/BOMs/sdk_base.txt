@@ -715,8 +715,16 @@ DeliveryName	InstallName	FileCheckSum	FileFeature	FileOwner
 <deliverydir>/external/mbedtls/mbedtls_code/include/mbedtls/gcm.h	<installdir>/package/include/mbedtls/gcm.h	0	main	STP
 <deliverydir>/external/mbedtls/mbedtls_code/include/mbedtls/x509.h	<installdir>/package/include/mbedtls/x509.h	0	main	STP
 <deliverydir>/external/mbedtls/mbedtls_code/include/mbedtls/error.h	<installdir>/package/include/mbedtls/error.h	0	main	STP
-<deliverydir>/external/mbedtls/mbedtls_code/include/mbedtls/asn1.h	<installdir>/package/include/mbedtls/asn1.h 0	main	STP
 <deliverydir>/external/mbedtls/mbedtls_code/include/mbedtls/pk.h	<installdir>/package/include/mbedtls/pk.h	0	main	STP
+<deliverydir>/external/mbedtls/mbedtls_code/include/mbedtls/asn1.h	<installdir>/package/include/mbedtls/asn1.h	0	main	STP
+<deliverydir>/external/mbedtls/mbedtls_code/include/mbedtls/ccm.h	<installdir>/package/include/mbedtls/ccm.h	0	main	STP
+<deliverydir>/external/mbedtls/mbedtls_code/include/mbedtls/md5.h	<installdir>/package/include/mbedtls/md5.h	0	main	STP
+<deliverydir>/external/mbedtls/mbedtls_code/include/mbedtls/cmac.h	<installdir>/package/include/mbedtls/cmac.h	0	main	STP
+<deliverydir>/external/mbedtls/mbedtls_code/include/mbedtls/ecjpake.h	<installdir>/package/include/mbedtls/ecjpake.h	0	main	STP
+<deliverydir>/external/mbedtls/mbedtls_code/include/mbedtls/chachapoly.h	<installdir>/package/include/mbedtls/chachapoly.h	0	main	STP
+<deliverydir>/external/mbedtls/mbedtls_code/include/mbedtls/chacha20.h	<installdir>/package/include/mbedtls/chacha20.h	0	main	STP
+<deliverydir>/external/mbedtls/mbedtls_code/include/mbedtls/ripemd160.h	<installdir>/package/include/mbedtls/ripemd160.h	0	main	STP
+<deliverydir>/external/mbedtls/mbedtls_code/include/mbedtls/poly1305.h	<installdir>/package/include/mbedtls/poly1305.h	0	main	STP
 <deliverydir>/external/mbedtls/mbedtls_code/include/mbedtls/mbedtls_config.h	<installdir>/package/include/mbedtls/config.h	0	main	STP
 <deliverydir>/external/mbedtls/mbedtls_code/include/psa/crypto_builtin_composites.h	<installdir>/package/include/psa/crypto_builtin_composites.h	0	main	STP
 <deliverydir>/external/mbedtls/mbedtls_code/include/psa/crypto_builtin_primitives.h	<installdir>/package/include/psa/crypto_builtin_primitives.h	0	main	STP
