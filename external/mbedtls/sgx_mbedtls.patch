@@ -1,5 +1,5 @@
 diff --git a/include/mbedtls/mbedtls_config.h b/include/mbedtls/mbedtls_config.h
-index 4292b493b..a0fd173f4 100644
+index 4292b493b..0dac2b455 100644
 --- a/include/mbedtls/mbedtls_config.h
 +++ b/include/mbedtls/mbedtls_config.h
 @@ -89,7 +89,7 @@
@@ -83,6 +83,24 @@ index 4292b493b..a0fd173f4 100644
  
  /**
   * \def MBEDTLS_USE_PSA_CRYPTO
+@@ -1940,7 +1940,7 @@
+  *
+  * Uncomment this to enable internal use of PSA Crypto and new associated APIs.
+  */
+-//#define MBEDTLS_USE_PSA_CRYPTO
++#define MBEDTLS_USE_PSA_CRYPTO
+ 
+ /**
+  * \def MBEDTLS_PSA_CRYPTO_CONFIG
+@@ -1965,7 +1965,7 @@
+  * This feature is still experimental and is not ready for production since
+  * it is not completed.
+  */
+-//#define MBEDTLS_PSA_CRYPTO_CONFIG
++#define MBEDTLS_PSA_CRYPTO_CONFIG
+ 
+ /**
+  * \def MBEDTLS_VERSION_FEATURES
 @@ -2778,7 +2778,7 @@
   *
   * This modules adds support for the VIA PadLock on x86.
@@ -128,6 +146,57 @@ index 4292b493b..a0fd173f4 100644
  
  /**
   * \def MBEDTLS_VERSION_C
+diff --git a/include/psa/crypto_config.h b/include/psa/crypto_config.h
+index e68fac8b4..5b7f9f6be 100644
+--- a/include/psa/crypto_config.h
++++ b/include/psa/crypto_config.h
+@@ -56,11 +56,11 @@
+ //#define PSA_WANT_ALG_CBC_MAC                    1
+ #define PSA_WANT_ALG_CBC_NO_PADDING             1
+ #define PSA_WANT_ALG_CBC_PKCS7                  1
+-#define PSA_WANT_ALG_CCM                        1
+-#define PSA_WANT_ALG_CCM_STAR_NO_TAG            1
++//#define PSA_WANT_ALG_CCM                        1
++//#define PSA_WANT_ALG_CCM_STAR_NO_TAG            1
+ #define PSA_WANT_ALG_CMAC                       1
+-#define PSA_WANT_ALG_CFB                        1
+-#define PSA_WANT_ALG_CHACHA20_POLY1305          1
++//#define PSA_WANT_ALG_CFB                        1
++//#define PSA_WANT_ALG_CHACHA20_POLY1305          1
+ #define PSA_WANT_ALG_CTR                        1
+ #define PSA_WANT_ALG_DETERMINISTIC_ECDSA        1
+ #define PSA_WANT_ALG_ECB_NO_PADDING             1
+@@ -72,12 +72,12 @@
+ #define PSA_WANT_ALG_HKDF_EXTRACT               1
+ #define PSA_WANT_ALG_HKDF_EXPAND                1
+ #define PSA_WANT_ALG_HMAC                       1
+-#define PSA_WANT_ALG_MD5                        1
+-#define PSA_WANT_ALG_OFB                        1
++//#define PSA_WANT_ALG_MD5                        1
++//#define PSA_WANT_ALG_OFB                        1
+ /* PBKDF2-HMAC is not yet supported via the PSA API in Mbed TLS.
+  * Note: when adding support, also adjust include/mbedtls/config_psa.h */
+ //#define PSA_WANT_ALG_PBKDF2_HMAC                1
+-#define PSA_WANT_ALG_RIPEMD160                  1
++//#define PSA_WANT_ALG_RIPEMD160                  1
+ #define PSA_WANT_ALG_RSA_OAEP                   1
+ #define PSA_WANT_ALG_RSA_PKCS1V15_CRYPT         1
+ #define PSA_WANT_ALG_RSA_PKCS1V15_SIGN          1
+@@ -120,10 +120,10 @@
+ #define PSA_WANT_KEY_TYPE_PASSWORD_HASH         1
+ #define PSA_WANT_KEY_TYPE_HMAC                  1
+ #define PSA_WANT_KEY_TYPE_AES                   1
+-#define PSA_WANT_KEY_TYPE_ARIA                  1
+-#define PSA_WANT_KEY_TYPE_CAMELLIA              1
+-#define PSA_WANT_KEY_TYPE_CHACHA20              1
+-#define PSA_WANT_KEY_TYPE_DES                   1
++//#define PSA_WANT_KEY_TYPE_ARIA                  1
++//#define PSA_WANT_KEY_TYPE_CAMELLIA              1
++//#define PSA_WANT_KEY_TYPE_CHACHA20              1
++//#define PSA_WANT_KEY_TYPE_DES                   1
+ #define PSA_WANT_KEY_TYPE_ECC_KEY_PAIR          1
+ #define PSA_WANT_KEY_TYPE_ECC_PUBLIC_KEY        1
+ #define PSA_WANT_KEY_TYPE_RAW_DATA              1
 diff --git a/library/aesni.c b/library/aesni.c
 index a23c5b595..db1cf1ccd 100644
 --- a/library/aesni.c
